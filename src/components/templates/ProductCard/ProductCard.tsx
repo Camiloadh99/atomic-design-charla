@@ -11,24 +11,18 @@ interface Product {
   colors: string[];
   rate: number;
 }
-interface ProductCardProps {
-  products: Product[];
-}
-export default function ProductCard({ products }: ProductCardProps) {
+
+export default function ProductCard({ product }: { product: Product }) {
   return (
-    <>
-      {products.map((product) => (
-        <Card>
-          <ProductImage image={product.image} isNew={product.isNew} />
-          <ProductDescription
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            colors={product.colors}
-            rate={product.rate}
-          />
-        </Card>
-      ))}
-    </>
+    <Card>
+      <ProductImage image={product.image} isNew={product.isNew} />
+      <ProductDescription
+        title={product.title}
+        description={product.description}
+        price={product.price}
+        colors={product.colors}
+        rate={product.rate}
+      />
+    </Card>
   );
 }

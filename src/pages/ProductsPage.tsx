@@ -36,7 +36,7 @@ export default function ProductsPage() {
   return (
     <>
       {products.map((product) => (
-        <ProductCard products={[product]} />
+        <ProductCard product={product} />
       ))}
     </>
   );
