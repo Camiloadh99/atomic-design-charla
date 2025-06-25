@@ -1,0 +1,218 @@
+/* Base styles for chip component */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 16px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Size variants */
+.chip--size-small {
+  height: 24px;
+  padding: 0 8px;
+  font-size: 0.75rem;
+}
+
+.chip--size-medium {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 0.875rem;
+}
+
+.chip--size-large {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 1rem;
+}
+
+/* Icon styles */
+.chip__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.chip--size-small .chip__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.chip--size-large .chip__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Label styles */
+.chip__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Delete button styles */
+.chip__delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0;
+  color: inherit;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+.chip__delete:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chip--size-small .chip__delete {
+  width: 16px;
+  height: 16px;
+}
+
+.chip--size-large .chip__delete {
+  width: 20px;
+  height: 20px;
+}
+
+/* Filled variant colors */
+.chip--variant-filled.chip--color-default {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.chip--variant-filled.chip--color-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.chip--variant-filled.chip--color-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.chip--variant-filled.chip--color-success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.chip--variant-filled.chip--color-error {
+  background-color: var(--color-error);
+  color: white;
+}
+
+.chip--variant-filled.chip--color-warning {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.chip--variant-filled.chip--color-info {
+  background-color: var(--color-info);
+  color: white;
+}
+
+/* Outlined variant colors */
+.chip--variant-outlined.chip--color-default {
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.chip--variant-outlined.chip--color-primary {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.chip--variant-outlined.chip--color-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.chip--variant-outlined.chip--color-success {
+  background-color: transparent;
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+}
+
+.chip--variant-outlined.chip--color-error {
+  background-color: transparent;
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+}
+
+.chip--variant-outlined.chip--color-warning {
+  background-color: transparent;
+  border: 1px solid var(--color-warning);
+}
+
+.chip--variant-outlined.chip--color-info {
+  background-color: transparent;
+  border: 1px solid var(--color-info);
+  color: var(--color-info);
+}
+
+/* Clickable state */
+.chip--clickable {
+  cursor: pointer;
+}
+
+.chip--clickable:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.chip--clickable:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled state */
+.chip--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Focus styles for accessibility */
+.chip--clickable:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .chip--variant-filled.chip--color-default {
+    background-color: #424242;
+    color: #e0e0e0;
+  }
+
+  .chip--variant-outlined.chip--color-default {
+    border-color: #424242;
+    color: #e0e0e0;
+  }
+
+  .chip__delete:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

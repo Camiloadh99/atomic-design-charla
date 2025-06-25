@@ -1,0 +1,14 @@
+.card {
+  border-radius: 16px;
+  width: 350px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  position: relative;
+  width: 100%;
+}
+
+.card-body {
+  padding: 16px;
+}
