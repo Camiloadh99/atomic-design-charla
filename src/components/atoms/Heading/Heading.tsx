@@ -1,5 +1,5 @@
 import React from "react";
-import "./Heading.css";
+import "./style.css";
 
 export type HeadingVariant =
   | "h1"
