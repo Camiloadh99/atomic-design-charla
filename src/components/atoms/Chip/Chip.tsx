@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Heading } from "../Heading";
 
 export type ChipVariant = "filled" | "outlined";
 export type ChipColor =
@@ -47,7 +48,9 @@ export default function Chip({
     <div className={classes} {...props}>
       {icon && <span className="chip__icon">{icon}</span>}
 
-      <span className="chip__label">{label}</span>
+      <Heading variant="h4" className="chip__label">
+        {label}
+      </Heading>
     </div>
   );
 }

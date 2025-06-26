@@ -1,4 +1,6 @@
 import ProductCard from "../components/templates/ProductCard/ProductCard";
+import product1 from "../assets/Product1.png";
+import product2 from "../assets/Product2.png";
 
 export default function ProductsPage() {
   const products = [
@@ -6,31 +8,31 @@ export default function ProductsPage() {
       title: "RIA Mini Vault",
       description: "Vegan leather",
       price: 99.99,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSyTl-9sHKwWAJsLwknGYJaI4fzDDUJfRUA&s",
+      image: product1,
       isNew: true,
-      colors: ["red", "blue", "green"],
+      colors: ["DarkOrange", "MediumVioletRed", "DarkTurquoise", "Black"],
       rate: 4,
+      ratingsNumber: 124,
     },
     {
       title: "RIA Mini Vault",
       description: "Vegan leather",
       price: 199.99,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSyTl-9sHKwWAJsLwknGYJaI4fzDDUJfRUA&s",
+      image: product2,
       isNew: true,
-      colors: ["orange", "black", "green"],
+      colors: ["Orange", "Black", "Green", "Crimson"],
       rate: 5,
+      ratingsNumber: 176,
     },
     {
       title: "RIA Mini Vault",
       description: "Vegan leather",
       price: 22.99,
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSyTl-9sHKwWAJsLwknGYJaI4fzDDUJfRUA&s",
+      image: product2,
       isNew: false,
-      colors: ["orange", "pink", "black"],
+      colors: ["Indigo", "Pink", "Black", "SeaGreen"],
       rate: 2,
+      ratingsNumber: 10,
     },
   ];
   return (

@@ -8,9 +8,10 @@ export default function ProductColors({ colors }: { colors: string[] }) {
 
   return (
     <div>
-      <Heading variant="p" color="secondary">
+      <Heading variant="h3" color="secondary">
         Color: {selectedColor}
       </Heading>
+
       <div className="product-colors">
         {colors.map((color) => (
           <ColorCircle

@@ -10,6 +10,7 @@ interface Product {
   isNew?: boolean;
   colors: string[];
   rate: number;
+  ratingsNumber: number;
 }
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -22,6 +23,7 @@ export default function ProductCard({ product }: { product: Product }) {
         price={product.price}
         colors={product.colors}
         rate={product.rate}
+        ratingsNumber={product.ratingsNumber}
       />
     </Card>
   );

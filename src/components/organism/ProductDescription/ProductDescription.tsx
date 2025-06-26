@@ -11,26 +11,28 @@ export default function ProductDescription({
   price,
   colors,
   rate,
+  ratingsNumber,
 }: {
   title: string;
   description: string;
   price: number;
   colors: string[];
   rate: number;
+  ratingsNumber: number;
 }) {
   return (
     <Card.Body>
       <div className="product-title-section">
-        <Heading variant="h3">{title}</Heading>
-        <Heading variant="h5">${price}</Heading>
+        <Heading variant="h1">{title}</Heading>
+        <Heading variant="h2">${price}</Heading>
       </div>
-      <Heading variant="p" color="secondary">
+      <Heading variant="h3" color="secondary">
         {description}
       </Heading>
       <div className="divider-section"></div>
       <ProductColors colors={colors} />
       <div className="divider-section card-footer">
-        <Stars rate={rate} />
+        <Stars rate={rate} ratingsNumber={ratingsNumber} />
         <div className="card-footer-icons">
           <IconButton icon="visibility" onClick={() => {}} />
           <IconButton icon="local_mall" onClick={() => {}} />
