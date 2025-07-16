@@ -37,10 +37,12 @@ export default function ProductsPage() {
     },
   ];
   return (
-    <div className="product-grid">
-      {products.map((product) => (
-        <ProductCard product={product} />
-      ))}
+    <div className="container">
+      <div className="product-grid">
+        {products.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
     </div>
   );
 }
