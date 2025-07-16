@@ -1,6 +1,7 @@
 import ProductCard from "../components/templates/ProductCard/ProductCard";
 import product1 from "../assets/Product1.png";
 import product2 from "../assets/Product2.png";
+import "../App.css";
 
 export default function ProductsPage() {
   const products = [
@@ -36,10 +37,10 @@ export default function ProductsPage() {
     },
   ];
   return (
-    <>
+    <div className="product-grid">
       {products.map((product) => (
         <ProductCard product={product} />
       ))}
-    </>
+    </div>
   );
 }
